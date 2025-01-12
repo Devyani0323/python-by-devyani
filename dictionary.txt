@@ -1,0 +1,95 @@
+mydictionary={1:"yash",2:"aman"}
+print(mydictionary)
+
+
+{1: 'yash', 2: 'aman'}
+
+========================================================================
+mydictionary={"amount":0}
+for i in range(1,11):
+  mydictionary["amount"]=mydictionary["amount"]+1
+  print(mydictionary)
+
+
+{'amount': 1}
+{'amount': 2}
+{'amount': 3}
+{'amount': 4}
+{'amount': 5}
+{'amount': 6}
+{'amount': 7}
+{'amount': 8}
+{'amount': 9}
+{'amount': 10}
+
+
+===============================================================================
+mydictionary={"amount":0}
+for char in "hellooque":
+  if char in "aeiou":
+    mydictionary["amount"]=1
+  else:
+   mydictionary["amount"]=mydictionary["amount"]+1
+print(mydictionary)
+
+
+{'amount': 1}
+
+=============================================================================
+mydictionary={}
+for char in "heeehyhh":
+  if char not in mydictionary:
+    mydictionary[char]=1
+
+mydictionary
+
+{'h': 1, 'e': 1, 'y': 1}
+
+==========================================================================
+mydictionary={}
+for char in "heyh":
+  if char in  mydictionary:
+    mydictionary[char]=+1
+mydictionary
+
+{}
+
+=======================================
+
+mydictionary={1:"devyani",2:"aman"}
+mydictionary[1]="usha"# update
+mydictionary[3]="isha"# insert
+mydictionary[4]="isha"
+
+print(mydictionary)
+
+{1: 'usha', 2: 'aman', 3: 'isha', 4: 'isha'}
+
+=================================================================
+mydictionary.pop(2)
+print(mydictionary)
+
+
+{1: 'usha', 3: 'isha', 4: 'isha'}
+
+==============================================================
+mydictionary={1:"tushar",2:"devyani",3:"sneha"}
+for key in mydictionary:
+  print(key)
+
+1
+2
+3
+
+=============================================
+mydictionary={"amount":100}
+mydictionary["amount"]+=10
+print(mydictionary)
+
+{'amount': 110}
+=======================================
+
+
+
+
+
