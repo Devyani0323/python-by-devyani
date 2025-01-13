@@ -1,0 +1,47 @@
+# "anagram"
+# "nagaram"
+#
+mydictionary={}
+for i in "anagram":
+  if i not in mydictionary:
+    mydictionary[i]=1
+  else:
+    mydictionary[i]+=1
+print(mydictionary)
+
+
+{'a': 3, 'n': 1, 'g': 1, 'r': 1, 'm': 1}
+
+===========================================================
+
+
+mydictionary1={}
+for i in "hello":
+  if i not in mydictionary1:
+    mydictionary1[i]=1
+  else:
+    mydictionary1[i]+=1
+print(mydictionary1)
+
+{'h': 1, 'e': 1, 'l': 2, 'o': 1}
+
+===========================================================
+
+
+mydictionary2={}
+for i in "olleh":
+  if i not in mydictionary2:
+    mydictionary2[i]=1
+  else:
+    mydictionary2[i]+=1
+print(mydictionary2)
+
+{'o': 1, 'l': 2, 'e': 1, 'h': 1}
+
+============================================================
+mydictionary1==mydictionary2
+
+True
+
+===================================================
+
