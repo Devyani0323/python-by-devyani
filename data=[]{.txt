@@ -1,0 +1,104 @@
+data="[]{"
+mylist=[]
+x=0
+
+for char in data:
+  if char in "[({":
+    mylist.append(char)
+  elif(mylist):
+    if(  char=="}" and mylist.pop()!="{") :
+      x=1
+      break
+    elif(  char=="]" and mylist.pop()!="[") :
+      x=1
+      break
+  else:
+    x=1
+    break
+if(x==0 and len(mylist)==0):
+  print("Valid")
+else:
+  print("Invalid")
+
+
+output==> invalid
+
+----------------------------------------------------------------------
+mylist=[10,201,401,210,3,4,5]
+size=len(mylist)
+for i in range(0,size):
+  if(mylist[i]%2!=0):
+    print(mylist[i])
+
+output==> 201
+          401
+          3
+          5
+
+------------------------------------------------------------------------------
+
+mylist=[10,201,401,210,3,4,5]
+max=mylist[0]
+size=len(mylist)
+for i in range(0,size):
+  if(mylist[i]>max):
+    max=mylist[i]
+print(max)
+
+output==> 401
+
+----------------------------------------------------------------------------
+max=0
+smax=0
+mylist=[10,201,401,210,3,4,5]
+size=len(mylist)
+for i in range(0,size):
+  if(mylist[i]>max):
+    smax=max
+    max=mylist[i]
+  elif(mylist[i]>smax):
+    smax=mylist[i]
+    print(max,smax)
+
+
+output==> 401 201
+
+---------------------------------------------------------------------------
+
+max=0
+smax=0
+mylist=[10,20,4,60,100,40,80]
+for i in mylist:
+  if(i>max):
+    smax=max
+    max=i
+
+  elif(i>smax):
+    smax=i
+print(max,smax)
+
+output==>100 80
+
+----------------------------------------------------------------------
+mylist=[1,2,33,4,7,9,11]
+target=9
+start=0
+newlist=[]
+end=len(mylist)-1
+while(start<end):
+  if(mylist[start]+mylist[end]==target):
+    newlist.append([start,end])
+    break
+  elif(mylist[start]+mylist[end]>target):
+   end=end-1
+  else:
+    start=start+1
+
+print(newlist)
+
+
+
+output==> [[1, 4]]
+
+--------------------------------------------------
+
