@@ -1,0 +1,107 @@
+def greeting():
+  print("hey")
+
+greeting()
+
+output==> hey
+
+----------------------------------
+
+def greeting(x): #x is local variable
+  print("hey",x)
+
+greeting("devyani")
+
+output==> hey devyani
+
+---------------------------------------------
+#parameter  <= x
+y=10
+def greeting(x):
+  print(x+10,y)
+
+greeting(20)
+print("y:",y)
+
+output==>30 10
+         y: 10
+
+------------------------------------------
+
+#parameter  <= x
+y=10
+def greeting(x):
+  global y
+  print(y)
+  y=20
+
+greeting(20)
+print("y:",y)
+
+
+output==>10
+         y: 20
+
+---------------------------------------------
+def add1(x,y):
+  print(x+y)
+
+add1(10,20)
+
+output==> 30
+
+--------------------------------------
+def add1(x,y):
+  print(x+y)
+a=10
+b=20
+add1(a,b)
+
+output==> 30
+
+-------------------------------
+
+def add1(x,y):
+  print(x,y)
+  a=200
+a=100 #global variable because of out of function
+b=20 #global
+add1(a,b)
+print("a value",a)
+
+output==>100 20
+a value 100
+
+--------------------------------------------------------------
+def add1(list1):
+  print("list function",list1)
+
+mylist=[10,20]
+add1(mylist)
+print("mylist value",mylist)
+
+output==>list function [10, 20]
+mylist value [10, 20]
+
+-------------------------------------------------------------
+
+def add1(list1):
+  print("list function",list1)
+  list1.append("hello")
+  print("list_function",list1)
+mylist=[10,20]
+add1(mylist)
+print("mylist value",mylist)
+
+output==>list function [10, 20]
+list_function [10, 20, 'hello']
+mylist value [10, 20, 'hello']
+
+----------------------------------------------------------------
+
+
+
+
+
+
+
