@@ -1,0 +1,82 @@
+mylist=[10,20]
+list1=mylist
+print(id(mylist),id(list1))
+
+
+output==> 139052606012800 139052606012800
+
+
+------------------------------------------------------------------------------
+# diffrent types of argument passes
+def employee(eid,name,salary):
+  print(f"eid{eid} name:{name} salary{salary}")
+
+employee(101,"devyani",800000)   #required argument
+
+
+eid101 name:devyani salary800000
+
+--------------------------------------------------------------------------
+employee("devyani",200,100)  # positional argument
+
+output==>eiddevyani name:200 salary100
+
+--------------------------------------------------------------------
+
+def prime_num():
+  for i in range(2,15):
+    if(i==2):
+      print("prime no.",i)
+    else:
+      for x in range(2,i):
+        if(i%x==0):
+          break
+      else:
+        print("prime no.",i)
+
+prime_num()
+
+output==>prime no. 2
+         prime no. 3
+         prime no. 5
+         prime no. 7
+         prime no. 11
+         prime no. 13
+----------------------------------------------------------------------------
+
+def employee(eid,name,salary):
+  print(f"eid{eid} name{name} salary{salary}")
+employee(10,"naina",80000) # required argument
+
+output==>eid10 namenaina salary80000
+
+--------------------------------------------------------------------
+def employee(eid,name,salary):
+  print(f"eid{eid} name{name} salary{salary}")
+employee("naina",10,80000) # positional argument
+
+eidnaina name10 salary80000
+
+------------------------------------------------------------------
+def employee(eid,name,salary):
+  print(f"eid{eid} name{name} salary{salary}")
+
+employee(name="naina",eid=10,salary=80000) # keyword argument
+
+
+
+output==>eid10 namenaina salary80000
+
+---------------------------------------------------------------------
+def employee(eid,name,salary=100): #default argument
+  print(f"eid {eid} name:{name} salary{salary}")
+
+employee("naina",10,999)
+
+
+
+output==>eid naina name:10 salary999
+
+-------------------------------------------------------------
+
+
