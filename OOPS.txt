@@ -1,0 +1,125 @@
+  class dog:
+  def __init__(self,name,breed):
+    self.name = name
+    self.breed = breed
+
+  def bark(self):
+    print(f"{self.name} says woof! {self.breed} this is breed")
+
+#dog1=dog("max","labrador")
+dog2=dog("buddy","golden retriever")
+dog2.bark()
+
+
+output==>buddy says woof! golden retriever this is breed
+
+
+============================================================================
+
+# create a calculator class.
+# add methods for addition , substraction,multiplication and division
+#use the self parameter to access the numbers
+
+class calculator:
+  def __init__(self,num1,num2):
+    self.num1=num1
+    self.num2=num2
+  def add(self):
+    return self.num1+self.num2
+
+  def subtract(self):
+    return self.num1-self.num2
+
+  def multply(self):
+    return self.num1*self.num2
+
+  def division(self):
+    if self.num2 !=0:
+      return self.num1/self.num2
+    else:
+      return "division by zero is not allowed!"
+
+calc=calculator(10,2)
+calc.multply()
+
+
+output==>20
+
+=================================================================================
+class calculator:
+  def __init__(self,num1,num2):
+    self.num1=num1
+    self.num2=num2
+  def add(self):
+    return self.num1+ self.num2
+
+  def subtract(self):
+    return self.num1-self.num2
+  def multiply(self):
+    return self.num1 * self.num2
+  def divide(self):
+    if self.num2 !=0:
+      return self.num1/self.num2
+    else:
+      return "division by zero is not allowed!"
+
+calc=calculator(int(input("enter first number")), int(input("enter second number")))
+
+print(calc.add())
+print(calc.subtract())
+
+output==> enter first number10
+enter second number5
+15
+5
+
+=========================================================================
+class bankaccount:
+  def __init__(self,holder_name,balance):
+    self.holder_name=holder_name
+    self.balance  = balance
+
+  def deposite(self,amount):
+    self.balance+=amount
+    print(f"{amount} deposited ,new balance:{self.balance}")
+
+  def withdraw(self,amount):
+    if amount <= self.balance:
+      self. balance - amount
+      print(f"{amount} withdraw : realising balance: {self.balance}")
+
+    else:
+      print("inefficient funds")
+
+  def check_balance(self):
+    return f"accountbalance for {self.holder_name} balance {self.balance}"
+
+
+account=bankaccount("devyani", 1000)
+account.deposite(500)
+account.withdraw(500)
+print(account.check_balance())
+
+output==>
+class bankaccount:
+  def __init__(self,holder_name,balance):
+    self.holder_name=holder_name
+    self.balance  = balance
+
+  def deposite(self,amount):
+    self.balance+=amount
+    print(f"{amount} deposited ,new balance:{self.balance}")
+
+  def withdraw(self,amount):
+…
+account=bankaccount("devyani", 1000)
+account.deposite(500)
+account.withdraw(500)
+print(account.check_balance())
+500 deposited ,new balance:1500
+500 withdraw : realising balance: 1500
+accountbalance for devyani balance 1500
+
+=============================================================================
+
+
