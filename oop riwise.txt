@@ -1,0 +1,54 @@
+class p:
+    count = 0  # Class variable
+
+    def __init__(self):
+        p.count += 1  # Constructor me count ko 1 se badhaya
+        print(f"Object ban gaya. Ab count hai: {p.count}")
+
+# Ab multiple objects banate hain
+obj1 = p()
+obj2 = p()
+obj3 = p()
+
+===============================================================================================================
+ek class bnao a jisme info function hoga 
+#dusari classw bnao b isme info function hoga 
+#ek class bnao c  ye inherit karega class a or b ko and isme ek function hoga display
+
+# First class A
+class A:
+    def info(self):
+        print("Yeh class A ka info function hai.")
+
+# Second class B
+class B:
+    def info(self):
+        print("Yeh class B ka info function hai.")
+
+# Third class C, inheriting from A and B
+class C(B,A):
+    def display(self):
+        print("Yeh class C ka display function hai.")
+
+# Object of class C
+obj = C()
+
+# Call methods
+#obj.display()     # Class C ka function
+obj.info()        # Class A ka info() chalega by default (MRO ke according)
+
+=========================================================================================================================   
+
+
+class Bus:
+    def __init__(self):
+        print("Yeh Bus class ka constructor hai.")
+
+# Second Class
+class Passenger:
+    def __init__(self):
+        print("Yeh Passenger class ka constructor hai.")
+
+# Object banate hi constructor chalega
+b = Bus()
+p = Passenger()
